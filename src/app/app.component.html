@@ -4,4 +4,9 @@
   <hr />
 
   <app-auth />
+  <!-- @if (isAdmin()) {
+  <p>only Admins can access this area</p>
+  } -->
+
+  <p *ngIf="isAdmin()">only Admins can access this area</p>
 </main>
