@@ -2,12 +2,17 @@
 <form (ngSubmit)="onSubmit()">
   <p>
     <label>E-Mail</label>
-    <input type="email" name="email" [(ngModel)]="email" />
+    <input type="email" name="email" [(ngModel)]="email" autocomplete="email" />
   </p>
 
   <p>
     <label>Password</label>
-    <input type="password" name="password" [(ngModel)]="password" />
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      autocomplete="current-password"
+    />
   </p>
 
   <p>
