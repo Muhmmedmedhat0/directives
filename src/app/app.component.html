@@ -8,5 +8,13 @@
   <p>only Admins can access this area</p>
   } -->
 
-  <p *ngIf="isAdmin()">only Admins can access this area</p>
+  <p *appAuth="'admin'" class="protected-content admin">
+    only Admins can access this area
+  </p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">
+    only Users can access this area
+  </p>
+  <p *appAuth="'guest'" class="protected-content authenticated">
+    only Guests can access this area
+  </p>
 </main>
